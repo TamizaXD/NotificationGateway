@@ -16,6 +16,7 @@
   "password",
   "column_break_rbzt",
   "provider_name",
+  "message_service_type",
   "service_type_whatsapp_section",
   "session",
   "message_image",
@@ -94,7 +95,8 @@
   {
    "fieldname": "session",
    "fieldtype": "Data",
-   "label": "Session"
+   "label": "Session",
+   "read_only": 1
   },
   {
    "fieldname": "message_image",
@@ -108,12 +110,19 @@
   {
    "fieldname": "auth_token_wam",
    "fieldtype": "Data",
-   "label": "Auth Token WAM"
+   "label": "Auth Token WAM",
+   "read_only": 1
+  },
+  {
+   "fieldname": "message_service_type",
+   "fieldtype": "Select",
+   "label": "Message Service Type",
+   "options": "Al-Awael"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-18 10:36:48.669088",
+ "modified": "2024-09-19 09:58:15.656279",
  "modified_by": "Administrator",
  "module": "Notification Gateway",
  "name": "Message Service",
