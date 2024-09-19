@@ -1,0 +1,53 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-01 08:48:09.833639",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "wppconnect_url",
+  "column_break_bryi",
+  "alawael_url"
+ ],
+ "fields": [
+  {
+   "fieldname": "wppconnect_url",
+   "fieldtype": "Data",
+   "label": "WppConnect URL",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_bryi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "alawael_url",
+   "fieldtype": "Data",
+   "label": "Alawael URL",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-09-18 11:33:16.820913",
+ "modified_by": "Administrator",
+ "module": "Notification Gateway",
+ "name": "Message Configuration",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

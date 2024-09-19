@@ -1,0 +1,139 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-19 11:43:59.569883",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "details_section",
+  "customer_detail",
+  "phone_number",
+  "column_break_pvcc",
+  "service_type",
+  "receiver_phone_number",
+  "service_type_sms_section",
+  "organization",
+  "password",
+  "column_break_rbzt",
+  "provider_name",
+  "service_type_whatsapp_section",
+  "session",
+  "message_image",
+  "column_break_aylm",
+  "auth_token_wam"
+ ],
+ "fields": [
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "customer_detail",
+   "fieldtype": "Link",
+   "label": "Customer Detail",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "in_list_view": 1,
+   "label": "Phone Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_pvcc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "service_type",
+   "fieldtype": "Select",
+   "label": "Service Type",
+   "options": "Both\nSMS\nWhatsapp",
+   "reqd": 1
+  },
+  {
+   "fieldname": "receiver_phone_number",
+   "fieldtype": "Phone",
+   "label": "Receiver Phone Number"
+  },
+  {
+   "fieldname": "service_type_sms_section",
+   "fieldtype": "Section Break",
+   "label": "Service Type SMS"
+  },
+  {
+   "default": "FinTechaSys",
+   "fieldname": "organization",
+   "fieldtype": "Data",
+   "label": "Organization",
+   "read_only": 1
+  },
+  {
+   "fieldname": "password",
+   "fieldtype": "Password",
+   "label": "Password",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_rbzt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "FinTechaSys",
+   "fieldname": "provider_name",
+   "fieldtype": "Data",
+   "label": "Provider Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "service_type_whatsapp_section",
+   "fieldtype": "Section Break",
+   "label": "Service Type Whatsapp"
+  },
+  {
+   "fieldname": "session",
+   "fieldtype": "Data",
+   "label": "Session"
+  },
+  {
+   "fieldname": "message_image",
+   "fieldtype": "Attach Image",
+   "label": "Message Image"
+  },
+  {
+   "fieldname": "column_break_aylm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "auth_token_wam",
+   "fieldtype": "Data",
+   "label": "Auth Token WAM"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-09-18 10:36:48.669088",
+ "modified_by": "Administrator",
+ "module": "Notification Gateway",
+ "name": "Message Service",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "customer_detail"
+}
