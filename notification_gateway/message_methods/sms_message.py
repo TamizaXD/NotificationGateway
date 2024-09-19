@@ -5,7 +5,7 @@ from notification_gateway.data.web_status_code import STATUS_CODE_MAP
 
 
 class SMS(MessageService):
-    def send_message(self, name, phone_number, message_body):
+    def send_message(self, name, phone_number, message_body, base64 = None):
 
         getOrganization = get_customer(name).organization
         getUserName = get_customer(name).provider_name

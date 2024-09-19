@@ -5,11 +5,10 @@ from .message_service import MessageService
 from notification_gateway.data.web_status_code import STATUS_CODE_MAP
 
 class Whatsapp(MessageService):
-    def send_message(self, name, phone_number, message_body):
+    def send_message(self, name, phone_number, message_body, base64):
 
         url = get_wppconnect_url()
         baseUrl = urllib.parse.urljoin(url, get_customer(name).session)
-        base64 = None
         status = 'Failed'
 
         url = f"{baseUrl}/send-message"

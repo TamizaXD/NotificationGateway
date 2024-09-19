@@ -24,7 +24,7 @@ def add_to_message_dt(name, sender, message, message_time, message_service_type,
 
     messageFactory = MessageFactory()
     msg = messageFactory.createMessage(message_type)
-    status = msg.send_message(name, getReceiverPhoneNumber, message)
+    status = msg.send_message(name, getReceiverPhoneNumber, message ,base64)
 
     update_message_status(message_dt.name, status)
     add_to_message_log_dt(getSenderPhoneNumber, getReceiverPhoneNumber, frappe.utils.now(), message, message_status, message_dt.name, base64)
