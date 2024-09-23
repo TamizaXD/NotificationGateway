@@ -160,7 +160,8 @@ app_license = "mit"
 # ------------------------------
 #
 # override_whitelisted_methods = {
-# 	"frappe.desk.doctype.event.event.get_events": "notification_gateway.event.get_events"
+	# "frappe.desk.doctype.event.event.get_events": "notification_gateway.event.get_events"
+    # "api/v2/send_message": "notification_gateway.methods.add_to_message.add_to_message_dt"
 # }
 #
 # each overriding function accepts a `data` argument;

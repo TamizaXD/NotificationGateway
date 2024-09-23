@@ -1,6 +1,7 @@
 import frappe
 from notification_gateway.methods.get_doc_name import get_customer
 
+
 @frappe.whitelist(allow_guest=False)
 def send_message(name, message, base64 = None):
     #name, message, and base64 are parameters passed through Postman
@@ -9,7 +10,7 @@ def send_message(name, message, base64 = None):
     getMessageServiceType = get_customer(name).service_type
     getMessageService =  get_customer(name).service_type
     method = 'notification_gateway.methods.add_to_message.add_to_message_dt'
-
+    
     frappe.enqueue(method,    
                    name = name,
                    sender = getSender,
@@ -26,4 +27,9 @@ def send_message(name, message, base64 = None):
         "Message": message,
         "Message Service Type": getMessageServiceType
     }
+
 # http://127.0.0.1:8001/api/method/notification_gateway.apis.api.send_message
+
+# + GET /api/v2/method/Sales Order/make_sales_invoice
+
+# http://127.0.0.1:8001/api/v2/send_message

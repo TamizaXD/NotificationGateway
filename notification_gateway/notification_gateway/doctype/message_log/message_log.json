@@ -21,8 +21,7 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Sender Number",
-   "read_only": 1,
-   "reqd": 1
+   "read_only": 1
   },
   {
    "fieldname": "receiver_number",
@@ -37,8 +36,7 @@
    "fieldtype": "Datetime",
    "in_list_view": 1,
    "label": "Timestamp",
-   "read_only": 1,
-   "reqd": 1
+   "read_only": 1
   },
   {
    "fieldname": "status",
@@ -76,7 +74,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-18 10:36:58.143999",
+ "modified": "2024-09-22 12:02:45.750016",
  "modified_by": "Administrator",
  "module": "Notification Gateway",
  "name": "Message Log",
