@@ -228,3 +228,10 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+
+website_route_rules = [
+    {"from_route": "/swagger", "to_route": "swagger/index.html"},
+]
+
+CW_OPENAPI_DIR = "api"
+CW_OPENAPI_OUTPUT_FILE = ["www", "swagger", "swagger.json"]

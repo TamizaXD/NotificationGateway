@@ -16,15 +16,15 @@ def send_message(name, message, base64 = None):
 	getMessageService = get_customer(name).service_type
 	method = 'notification_gateway.methods.add_to_message.add_to_message_dt'
 
-	frappe.enqueue(method,    
-                   name = name,
-                   sender = getSender,
-                   message = message,
-                   message_time = frappe.utils.now(), 
-                   message_service_type = getMessageServiceType, 
-                   message_type = getMessageService,
-                   message_status = 'Pending',
-                   base64 = base64
+	frappe.enqueue(method, 
+                name = name,
+                sender = getSender,
+                message = message,
+                message_time = frappe.utils.now(), 
+                message_service_type = getMessageServiceType, 
+                message_type = getMessageService,
+                message_status = 'Pending',
+                base64 = base64
                 )
 	return { #test in Postman 
         "status": "Message queued for sending",
