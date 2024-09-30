@@ -20,6 +20,5 @@ class SMS(MessageService):
            "coding":  2
         }
         response = requests.get(url, params=data)
-        print(f"RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR{response}RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR")
         status = STATUS_CODE_MAP.get(response.status_code, 'Failed')
         return status

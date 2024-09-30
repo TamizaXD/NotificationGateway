@@ -39,7 +39,4 @@ def send_message(name, message, base64 = None):
     }
 
 # http://127.0.0.1:8001/api/method/notification_gateway.api.api.send_message
-
-# + GET /api/v2/method/Sales Order/make_sales_invoice
-
 # http://127.0.0.1:8001/api/v2/send_message

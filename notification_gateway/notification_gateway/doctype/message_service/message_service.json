@@ -33,7 +33,7 @@
    "fieldname": "customer_detail",
    "fieldtype": "Link",
    "label": "Customer Detail",
-   "options": "Customer"
+   "options": "Lago Customer"
   },
   {
    "fieldname": "phone_number",
@@ -122,7 +122,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-23 09:19:07.036756",
+ "modified": "2024-09-30 13:23:17.225291",
  "modified_by": "Administrator",
  "module": "Notification Gateway",
  "name": "Message Service",
@@ -142,6 +142,7 @@
   }
  ],
  "show_title_field_in_link": 1,
+ "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
  "title_field": "customer_detail"
