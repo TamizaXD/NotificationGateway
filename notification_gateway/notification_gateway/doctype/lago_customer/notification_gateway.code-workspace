@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "notification_gateway",
+			"path": "../../../.."
+		},
+		{
+			"name": "Lago",
+			"path": "../../../../../../../Lago"
+		}
+	],
+	"settings": {}
+}

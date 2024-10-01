@@ -23,9 +23,10 @@
   },
   {
    "fieldname": "sender",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Sender",
+   "options": "Lago Customer",
    "reqd": 1
   },
   {
@@ -66,7 +67,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-09-18 10:35:27.132264",
+ "modified": "2024-10-01 09:09:38.367311",
  "modified_by": "Administrator",
  "module": "Notification Gateway",
  "name": "Message",

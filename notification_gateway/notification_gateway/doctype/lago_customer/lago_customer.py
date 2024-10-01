@@ -27,8 +27,6 @@ def add_new_customer(self):
 	}
 	try:
 		requests.post(url, json=data, headers=headers)
-		frappe.msgprint("Customer Created")
 	except Exception as e:
-		frappe.msgprint("Customer is not Created")
 		print(f"ERROR: {e}")
 	
