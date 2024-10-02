@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class MessageLog(Document):
+class LagoConfiguration(Document):
 	pass

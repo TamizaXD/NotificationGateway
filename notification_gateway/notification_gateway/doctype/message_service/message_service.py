@@ -3,6 +3,7 @@
 
 import frappe
 from frappe.model.document import Document
+from notification_gateway.notification_gateway.doctype.lago_customer.lago_customer import current_usage, make_event 
 from notification_gateway.methods.get_doc_name import get_customer
 
 class MessageService(Document):
@@ -15,8 +16,9 @@ def send_message(name, message, base64 = None):
 	getMessageServiceType = get_customer(name).service_type
 	getMessageService = get_customer(name).service_type
 	method = 'notification_gateway.methods.add_to_message.add_to_message_dt'
-
-	frappe.enqueue(method, 
+	
+	if current_usage() <= 10:
+	    frappe.enqueue(method, 
                 name = name,
                 sender = getSender,
                 message = message,
@@ -25,11 +27,13 @@ def send_message(name, message, base64 = None):
                 message_type = getMessageService,
                 message_status = 'Pending',
                 base64 = base64
-                )
-	return { #test in Postman 
-        "status": "Message queued for sending",
-        "Sender": getSender,
-        "Message": message,
-        "Message Service Type": getMessageServiceType
-    }
+            )
+		
+		# make_event()
+	# return { #test in Postman 
+    #     "status": "Message queued for sending",
+    #     "Sender": getSender,
+    #     "Message": message,
+    #     "Message Service Type": getMessageServiceType
+    # }
 # http://127.0.0.1:8001/api/v2/method/Message Service/send_message
